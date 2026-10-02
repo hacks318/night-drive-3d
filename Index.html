@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no">
+
+    <title>Night Drive 3D</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <section id="menu">
+
+        <div class="logo">
+            <span>NIGHT</span>
+            <strong>DRIVE</strong>
+            <small>3D CITY</small>
+        </div>
+
+        <div class="moneyBox">
+            💰 $<span id="menuMoney">0</span>
+        </div>
+
+        <button id="playButton">
+            ▶ JOGAR
+        </button>
+
+        <button id="garageButton">
+            🚗 GARAGEM
+        </button>
+
+    </section>
+
+
+    <!-- GARAGEM -->
+
+    <section id="garage" class="hidden">
+
+        <h1>🚗 GARAGEM</h1>
+
+        <div class="garageMoney">
+            💰 $<span id="garageMoney">0</span>
+        </div>
+
+        <div id="carList"></div>
+
+        <button id="backGarage">
+            ← VOLTAR
+        </button>
+
+    </section>
+
+
+    <!-- JOGO -->
+
+    <section id="game" class="hidden">
+
+        <div id="hud">
+
+            <div class="hudMoney">
+                💰 $<span id="moneyValue">0</span>
+            </div>
+
+            <div class="wanted">
+                🚨 <span id="wantedValue">0</span>
+            </div>
+
+            <button id="pauseButton">
+                ⏸
+            </button>
+
+        </div>
+
+
+        <!-- CONTROLES -->
+
+        <div id="controls">
+
+            <div class="directionControls">
+
+                <button
+                    id="leftButton"
+                    class="control">
+                    ◀
+                </button>
+
+                <button
+                    id="rightButton"
+                    class="control">
+                    ▶
+                </button>
+
+            </div>
+
+            <div class="driveControls">
+
+                <button
+                    id="brakeButton"
+                    class="control">
+                    ▼
+                </button>
+
+                <button
+                    id="gasButton"
+                    class="control gas">
+                    ▲
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAUSA -->
+
+    <section id="pauseMenu" class="hidden">
+
+        <h1>⏸ PAUSADO</h1>
+
+        <button id="continueButton">
+            ▶ CONTINUAR
+        </button>
+
+        <button id="saveExitButton">
+            💾 SAIR COM SALVAR
+        </button>
+
+        <button id="noSaveExitButton">
+            🚪 SAIR SEM SALVAR
+        </button>
+
+        <button id="cancelExitButton">
+            ❌ NÃO SAIR
+        </button>
+
+    </section>
+
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+  </html>
